@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var sendButtonView: UIView!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var changePreferencesButtonView: UIView!
     
     // MARK: - Variables
     var dailyMessage: String?
@@ -43,24 +44,35 @@ class MainViewController: UIViewController {
     @IBAction func sendButtonTapped(_ sender: Any) {
         let isOnboarded = UserDefaults.standard.bool(forKey: "UserIsOnboarded")
         
-        sendMessageToWhatsapp()
+        if isOnboarded {
+            sendMessageToWhatsapp()
+        } else {
+            let prefVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Preferences")
+            prefVC.modalPresentationStyle = .overFullScreen
+            prefVC.modalTransitionStyle = .coverVertical
+            present(prefVC, animated: true)
+        }
         
-//        if isOnboarded {
-//            sendMessageToWhatsapp()
-//        } else {
-//            let prefVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Preferences")
-//        }
-        
+    }
+    
+    @IBAction func changePreferencesTapped(_ sender: Any) {
+        let prefVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Preferences")
+        prefVC.modalPresentationStyle = .overFullScreen
+        prefVC.modalTransitionStyle = .coverVertical
+        present(prefVC, animated: true)
     }
     
     func styleView() {
         messageBackgroundView.layer.cornerRadius = messageBackgroundView.bounds.height/8
         messageBackgroundView.layer.cornerCurve = .continuous
-        messageBackgroundView.layer.borderWidth = 2
-        messageBackgroundView.layer.borderColor = CGColor(red: 184/255, green: 70/255, blue: 246/255, alpha: 1)
+//        messageBackgroundView.layer.borderWidth = 2
+//        messageBackgroundView.layer.borderColor = CGColor(red: 184/255, green: 70/255, blue: 246/255, alpha: 1)
         
         sendButtonView.layer.cornerRadius = sendButtonView.bounds.height/2
         sendButtonView.layer.cornerCurve = .continuous
+        
+        changePreferencesButtonView.layer.cornerRadius = changePreferencesButtonView.bounds.height/2.4
+        changePreferencesButtonView.layer.cornerCurve = .continuous
     }
     
     func sendMessageToWhatsapp() {
@@ -68,9 +80,11 @@ class MainViewController: UIViewController {
             return
         }
         
-        let message = dailyMessage.addingPercentEncoding(withAllowedCharacters: (NSCharacterSet.urlQueryAllowed)) ?? "hey mother 💜"
+        let mothersNumber = UserDefaults.standard.string(forKey: "MothersNumber") ?? ""
         
-        if let whatsappURL = URL(string: "whatsapp://send?phone=+447522657793&text=\(message)") {
+        let message = dailyMessage.addingPercentEncoding(withAllowedCharacters: (NSCharacterSet.urlQueryAllowed)) ?? "💜"
+        
+        if let whatsappURL = URL(string: "whatsapp://send?phone=\(mothersNumber)&text=\(message)") {
             UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
         }
     }
