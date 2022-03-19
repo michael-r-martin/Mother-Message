@@ -57,7 +57,7 @@ class PreferencesViewController: UIViewController, UITextFieldDelegate {
         
         addNumberTextField.resignFirstResponder()
         
-        addNumberButtonView.layer.backgroundColor = CGColor(red: 82/255, green: 240/255, blue: 110/255, alpha: 1)
+        addNumberButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
@@ -88,6 +88,16 @@ class PreferencesViewController: UIViewController, UITextFieldDelegate {
         saveNumberButtonView.layer.cornerCurve = .continuous
         
         addNumberView.alpha = 0
+        
+        let phoneNumberAdded = UserDefaults.standard.string(forKey: "MothersNumber")
+        
+        if phoneNumberAdded != nil {
+            addNumberButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
+            addNumberButton.setTitle("Update mother's number 📱", for: .normal)
+            addNumberButton.setTitleColor(.white, for: .normal)
+        }
+        
+        notificationHelper.checkNotificationPermission()
     }
     
 
@@ -125,7 +135,9 @@ protocol NotifDelegate {
 
 extension PreferencesViewController: NotifDelegate {
     func notifsAuthorized() {
-        allowNotifsButtonView.layer.backgroundColor = CGColor(red: 82/255, green: 240/255, blue: 222/255, alpha: 1)
+        allowNotifsButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
+        allowNotifsButton.setTitle("Notifications are allowed ✅", for: .normal)
+        allowNotifsButton.setTitleColor(.white, for: .normal)
     }
     
     

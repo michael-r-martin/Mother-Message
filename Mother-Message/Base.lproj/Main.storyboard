@@ -276,7 +276,7 @@
                                     <constraint firstAttribute="trailing" secondItem="n21-Oz-lNX" secondAttribute="trailing" id="PI1-5i-3TC"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-1S-DI0">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-1S-DI0">
                                 <rect key="frame" x="154" y="585" width="67" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-XW-aPb">
@@ -330,8 +330,10 @@
                             <constraint firstItem="eiD-wN-deW" firstAttribute="leading" secondItem="ycP-eh-HZk" secondAttribute="trailing" constant="16" id="YdT-ow-Wb5"/>
                             <constraint firstItem="eiD-wN-deW" firstAttribute="width" secondItem="d3I-ea-WdT" secondAttribute="width" multiplier="0.12" id="aDL-Bg-UXc"/>
                             <constraint firstItem="XpP-Ol-xDY" firstAttribute="top" secondItem="znC-qa-HYt" secondAttribute="bottom" constant="60" id="dxz-cY-e09"/>
+                            <constraint firstItem="d3I-ea-WdT" firstAttribute="bottom" secondItem="gOx-1S-DI0" secondAttribute="bottom" constant="20" id="fuP-nK-Ooj"/>
                             <constraint firstItem="ycP-eh-HZk" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="hKX-sz-L9J"/>
                             <constraint firstItem="ycP-eh-HZk" firstAttribute="top" secondItem="DY1-Oy-OSg" secondAttribute="bottom" constant="30" id="psu-Go-Yhz"/>
+                            <constraint firstItem="gOx-1S-DI0" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="rTG-el-Gtk"/>
                             <constraint firstItem="DY1-Oy-OSg" firstAttribute="width" secondItem="d3I-ea-WdT" secondAttribute="width" multiplier="0.861333" id="tkc-Aa-OAa"/>
                         </constraints>
                     </view>
