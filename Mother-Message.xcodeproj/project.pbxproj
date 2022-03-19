@@ -15,9 +15,14 @@
 		960B77ED27E5E4A800C29C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960B77EB27E5E4A800C29C4A /* LaunchScreen.storyboard */; };
 		960B77F527E5E64400C29C4A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B77F427E5E64400C29C4A /* MainViewController.swift */; };
 		960B77F727E5EB1700C29C4A /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B77F627E5EB1700C29C4A /* PreferencesViewController.swift */; };
+		96E5489F27E5F7FA0053E686 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */; };
+		9D3DE94F1FFB8EB47C4A8386 /* Pods_Mother_Message.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DDF4F6BF64DC8BFF6DDB77 /* Pods_Mother_Message.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13C20B25FE5FC21D219F711C /* Pods-Mother-Message.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mother-Message.release.xcconfig"; path = "Target Support Files/Pods-Mother-Message/Pods-Mother-Message.release.xcconfig"; sourceTree = "<group>"; };
+		49DDF4F6BF64DC8BFF6DDB77 /* Pods_Mother_Message.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mother_Message.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5216876AA421A4B9977B93 /* Pods-Mother-Message.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mother-Message.debug.xcconfig"; path = "Target Support Files/Pods-Mother-Message/Pods-Mother-Message.debug.xcconfig"; sourceTree = "<group>"; };
 		960B77DA27E5E4A300C29C4A /* Mother-Message.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mother-Message.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		960B77DD27E5E4A300C29C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		960B77DF27E5E4A300C29C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 		960B77F427E5E64400C29C4A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		960B77F627E5EB1700C29C4A /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		960B77F827E5F15300C29C4A /* Mother-Message.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mother-Message.entitlements"; sourceTree = "<group>"; };
+		96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +42,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3DE94F1FFB8EB47C4A8386 /* Pods_Mother_Message.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F59DA0B38DC4628921FBE4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49DDF4F6BF64DC8BFF6DDB77 /* Pods_Mother_Message.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8017C00B68B4AC5BA9FC2F96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A5216876AA421A4B9977B93 /* Pods-Mother-Message.debug.xcconfig */,
+				13C20B25FE5FC21D219F711C /* Pods-Mother-Message.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		960B77D127E5E4A300C29C4A = {
 			isa = PBXGroup;
 			children = (
 				960B77DC27E5E4A300C29C4A /* Mother-Message */,
 				960B77DB27E5E4A300C29C4A /* Products */,
+				8017C00B68B4AC5BA9FC2F96 /* Pods */,
+				3F59DA0B38DC4628921FBE4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +94,7 @@
 				960B77E927E5E4A800C29C4A /* Assets.xcassets */,
 				960B77EB27E5E4A800C29C4A /* LaunchScreen.storyboard */,
 				960B77EE27E5E4A800C29C4A /* Info.plist */,
+				96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */,
 				960B77E627E5E4A300C29C4A /* Mother_Message.xcdatamodeld */,
 				960B77F427E5E64400C29C4A /* MainViewController.swift */,
 				960B77F627E5EB1700C29C4A /* PreferencesViewController.swift */,
@@ -82,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 960B77F127E5E4A800C29C4A /* Build configuration list for PBXNativeTarget "Mother-Message" */;
 			buildPhases = (
+				C4B0936DB41F6769CE838C7A /* [CP] Check Pods Manifest.lock */,
 				960B77D627E5E4A300C29C4A /* Sources */,
 				960B77D727E5E4A300C29C4A /* Frameworks */,
 				960B77D827E5E4A300C29C4A /* Resources */,
+				8FADBB95EE28C8813696EF77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +163,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				960B77ED27E5E4A800C29C4A /* LaunchScreen.storyboard in Resources */,
+				96E5489F27E5F7FA0053E686 /* GoogleService-Info.plist in Resources */,
 				960B77EA27E5E4A800C29C4A /* Assets.xcassets in Resources */,
 				960B77E527E5E4A300C29C4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FADBB95EE28C8813696EF77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mother-Message/Pods-Mother-Message-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mother-Message/Pods-Mother-Message-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mother-Message/Pods-Mother-Message-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B0936DB41F6769CE838C7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mother-Message-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		960B77D627E5E4A300C29C4A /* Sources */ = {
@@ -227,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +366,7 @@
 		};
 		960B77F227E5E4A800C29C4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5216876AA421A4B9977B93 /* Pods-Mother-Message.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -308,6 +381,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +391,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		960B77F327E5E4A800C29C4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C20B25FE5FC21D219F711C /* Pods-Mother-Message.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,6 +412,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,7 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

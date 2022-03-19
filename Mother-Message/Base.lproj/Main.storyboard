@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zlo-Py-aFd">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -35,6 +36,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="285" height="66"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Add your mother's number"/>
+                                                        <connections>
+                                                            <action selector="addNumberTapped:" destination="3MN-I6-3ko" eventType="touchUpInside" id="nVj-j4-0h3"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -52,6 +56,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="285" height="66"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Allow notifications"/>
+                                                        <connections>
+                                                            <action selector="allowNotifsTapped:" destination="3MN-I6-3ko" eventType="touchUpInside" id="HsJ-K0-iMF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -64,6 +71,42 @@
                                             </view>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-VW-1ts">
+                                        <rect key="frame" x="29" y="71" width="285" height="209"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFz-0i-0GC">
+                                                <rect key="frame" x="8" y="0.0" width="269" height="84"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Add your mother's number below, making sure to use the country code e.g. +44. (if you don't know it, copy the number directly from WhatsApp 💜)</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ch9-el-BuK">
+                                                <rect key="frame" x="8" y="92" width="269" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-km-89k">
+                                                <rect key="frame" x="89" y="134" width="98" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rt-UM-eJc">
+                                                        <rect key="frame" x="16" y="8" width="67" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="save">
+                                                            <color key="titleColor" red="0.97032083979999995" green="0.97723935910000004" blue="0.99799491709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.72298258540000004" green="0.274853915" blue="0.96630281210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -85,6 +128,15 @@
                             <constraint firstItem="3To-uG-4Td" firstAttribute="centerX" secondItem="jxt-5x-Fcg" secondAttribute="centerX" id="fZX-3I-1ih"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addNumberButton" destination="vao-Nq-qPf" id="JMY-Rs-3De"/>
+                        <outlet property="addNumberButtonView" destination="NaF-tv-msf" id="DcS-R5-fZw"/>
+                        <outlet property="allowNotifsButton" destination="y4u-5T-Bsf" id="xT0-lZ-ORO"/>
+                        <outlet property="allowNotifsButtonView" destination="haS-wn-Ccd" id="NKm-as-wWW"/>
+                        <outlet property="backgroundView" destination="3To-uG-4Td" id="A9d-1q-gEj"/>
+                        <outlet property="preferencesLabel" destination="v7F-qz-gtF" id="88F-JK-Sb0"/>
+                        <outlet property="preferencesStackView" destination="TQt-Yc-B7L" id="tCl-9h-p76"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Je-eu-K5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,10 +183,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycP-eh-HZk">
-                                <rect key="frame" x="104.5" y="403.5" width="166" height="63"/>
+                                <rect key="frame" x="104.5" y="403.5" width="166" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n21-Oz-lNX">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="56"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Send 🤍">
@@ -150,13 +202,13 @@
                                     <constraint firstAttribute="bottom" secondItem="n21-Oz-lNX" secondAttribute="bottom" id="1Fc-gj-wyt"/>
                                     <constraint firstItem="n21-Oz-lNX" firstAttribute="leading" secondItem="ycP-eh-HZk" secondAttribute="leading" id="AVV-cx-rwz"/>
                                     <constraint firstItem="n21-Oz-lNX" firstAttribute="top" secondItem="ycP-eh-HZk" secondAttribute="top" id="Bex-go-sEz"/>
-                                    <constraint firstAttribute="width" secondItem="ycP-eh-HZk" secondAttribute="height" multiplier="166:63" id="JQM-Nd-7wQ"/>
+                                    <constraint firstAttribute="width" secondItem="ycP-eh-HZk" secondAttribute="height" multiplier="166:56" id="JQM-Nd-7wQ"/>
                                     <constraint firstAttribute="trailing" secondItem="n21-Oz-lNX" secondAttribute="trailing" id="PI1-5i-3TC"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3I-ea-WdT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97032083975365546" green="0.97723935910173021" blue="0.99799491714595401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XpP-Ol-xDY" firstAttribute="leading" secondItem="d3I-ea-WdT" secondAttribute="leading" constant="40" id="AgG-Iz-sfl"/>
                             <constraint firstItem="DY1-Oy-OSg" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="DDG-oi-Xei"/>
