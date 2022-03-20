@@ -18,6 +18,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var sendButtonView: UIView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var changePreferencesButtonView: UIView!
+    @IBOutlet weak var shareButtonView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
     
     // MARK: - Variables
     var dailyMessage: String?
@@ -62,14 +64,33 @@ class MainViewController: UIViewController {
         present(prefVC, animated: true)
     }
     
+    @IBAction func privacyPolicyTapped(_ sender: Any) {
+        if let url = URL(string: "https://www.neurify.co.uk/mother-message-privacy") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        
+        if let url = URL(string: "https://apps.apple.com/app/id1615270805") {
+            let promoText = "Send your mother a daily message with Mother Message 💜"
+            
+            let activityVC = UIActivityViewController(activityItems: [promoText, url], applicationActivities: nil)
+            
+            present(activityVC, animated: true)
+        }
+        
+    }
+    
     func styleView() {
         messageBackgroundView.layer.cornerRadius = messageBackgroundView.bounds.height/8
         messageBackgroundView.layer.cornerCurve = .continuous
-//        messageBackgroundView.layer.borderWidth = 2
-//        messageBackgroundView.layer.borderColor = CGColor(red: 184/255, green: 70/255, blue: 246/255, alpha: 1)
         
         sendButtonView.layer.cornerRadius = sendButtonView.bounds.height/2
         sendButtonView.layer.cornerCurve = .continuous
+        
+        shareButtonView.layer.cornerRadius = shareButtonView.bounds.height/2
+        shareButtonView.layer.cornerCurve = .continuous
         
         changePreferencesButtonView.layer.cornerRadius = changePreferencesButtonView.bounds.height/2.4
         changePreferencesButtonView.layer.cornerCurve = .continuous

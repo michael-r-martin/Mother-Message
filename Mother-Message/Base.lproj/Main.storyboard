@@ -224,7 +224,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mother Message 💜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znC-qa-HYt">
                                 <rect key="frame" x="113" y="50" width="149" height="22"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpP-Ol-xDY">
@@ -276,18 +276,30 @@
                                     <constraint firstAttribute="trailing" secondItem="n21-Oz-lNX" secondAttribute="trailing" id="PI1-5i-3TC"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-1S-DI0">
-                                <rect key="frame" x="154" y="585" width="67" height="62"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-1S-DI0">
+                                <rect key="frame" x="113" y="601.5" width="149" height="45.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfA-XW-aPb">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="YQM-Dn-hy3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Privacy Policy">
+                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="privacyPolicyTapped:" destination="zlo-Py-aFd" eventType="touchUpInside" id="7tX-J3-EMF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-3i-YUu">
-                                        <rect key="frame" x="0.0" y="31" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <rect key="frame" x="0.0" y="24" width="149" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="v1.0 Mother Message 2022">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -315,11 +327,37 @@
                                     <constraint firstItem="Bf7-X9-PfJ" firstAttribute="top" secondItem="eiD-wN-deW" secondAttribute="top" id="l45-R2-rSF"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egE-8b-DrQ">
+                                <rect key="frame" x="104" y="461.5" width="167" height="56.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mq-Ef-tJB">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="56.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Black" family="Nunito" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Share 📨">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="zlo-Py-aFd" eventType="touchUpInside" id="nYv-Wc-QH5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0mq-Ef-tJB" secondAttribute="bottom" id="EGX-rh-t4I"/>
+                                    <constraint firstAttribute="trailing" secondItem="0mq-Ef-tJB" secondAttribute="trailing" id="bbN-Ud-16f"/>
+                                    <constraint firstAttribute="width" secondItem="egE-8b-DrQ" secondAttribute="height" multiplier="166:56" id="ctj-sc-sXV"/>
+                                    <constraint firstItem="0mq-Ef-tJB" firstAttribute="top" secondItem="egE-8b-DrQ" secondAttribute="top" id="gCK-nt-ThO"/>
+                                    <constraint firstItem="0mq-Ef-tJB" firstAttribute="leading" secondItem="egE-8b-DrQ" secondAttribute="leading" id="h3Y-WD-Lbf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3I-ea-WdT"/>
                         <color key="backgroundColor" red="0.97032083975365546" green="0.97723935910173021" blue="0.99799491714595401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="egE-8b-DrQ" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="29J-bD-SjD"/>
                             <constraint firstItem="eiD-wN-deW" firstAttribute="centerY" secondItem="ycP-eh-HZk" secondAttribute="centerY" id="3EH-Qd-QBF"/>
+                            <constraint firstItem="egE-8b-DrQ" firstAttribute="top" secondItem="ycP-eh-HZk" secondAttribute="bottom" constant="8" id="6p2-jY-XSg"/>
                             <constraint firstItem="XpP-Ol-xDY" firstAttribute="leading" secondItem="d3I-ea-WdT" secondAttribute="leading" constant="40" id="AgG-Iz-sfl"/>
                             <constraint firstItem="DY1-Oy-OSg" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="DDG-oi-Xei"/>
                             <constraint firstItem="DY1-Oy-OSg" firstAttribute="top" secondItem="XpP-Ol-xDY" secondAttribute="bottom" constant="12" id="I6c-xw-6GL"/>
@@ -329,6 +367,7 @@
                             <constraint firstItem="ycP-eh-HZk" firstAttribute="width" secondItem="d3I-ea-WdT" secondAttribute="width" multiplier="0.442667" id="YBI-9d-APs"/>
                             <constraint firstItem="eiD-wN-deW" firstAttribute="leading" secondItem="ycP-eh-HZk" secondAttribute="trailing" constant="16" id="YdT-ow-Wb5"/>
                             <constraint firstItem="eiD-wN-deW" firstAttribute="width" secondItem="d3I-ea-WdT" secondAttribute="width" multiplier="0.12" id="aDL-Bg-UXc"/>
+                            <constraint firstItem="egE-8b-DrQ" firstAttribute="width" secondItem="d3I-ea-WdT" secondAttribute="width" multiplier="0.445333" id="djF-xN-3kN"/>
                             <constraint firstItem="XpP-Ol-xDY" firstAttribute="top" secondItem="znC-qa-HYt" secondAttribute="bottom" constant="60" id="dxz-cY-e09"/>
                             <constraint firstItem="d3I-ea-WdT" firstAttribute="bottom" secondItem="gOx-1S-DI0" secondAttribute="bottom" constant="20" id="fuP-nK-Ooj"/>
                             <constraint firstItem="ycP-eh-HZk" firstAttribute="centerX" secondItem="7s2-l2-aQD" secondAttribute="centerX" id="hKX-sz-L9J"/>
@@ -344,6 +383,8 @@
                         <outlet property="motherMessageLabel" destination="znC-qa-HYt" id="VPL-cI-fsE"/>
                         <outlet property="sendButton" destination="n21-Oz-lNX" id="7CS-xO-Sys"/>
                         <outlet property="sendButtonView" destination="ycP-eh-HZk" id="XL7-kx-q90"/>
+                        <outlet property="shareButton" destination="0mq-Ef-tJB" id="kxN-kp-LiG"/>
+                        <outlet property="shareButtonView" destination="egE-8b-DrQ" id="UU8-SW-ZcX"/>
                         <outlet property="todaysMessageLabel" destination="XpP-Ol-xDY" id="KFU-Z7-1FE"/>
                     </connections>
                 </viewController>

@@ -57,7 +57,9 @@ class PreferencesViewController: UIViewController, UITextFieldDelegate {
         
         addNumberTextField.resignFirstResponder()
         
-        addNumberButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
+        addNumberButtonView.layer.backgroundColor = UIColor.systemBlue.cgColor
+        addNumberButton.setTitleColor(.white, for: .normal)
+        addNumberButton.setTitle("Update mother's number 📱", for: .normal)
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
@@ -66,8 +68,8 @@ class PreferencesViewController: UIViewController, UITextFieldDelegate {
         let notifContent = notificationHelper.createNotificationContent(title: "A new message is ready to send 💜", body: "Tap to make your mother smile", badge: 1, sound: .default)
         
         var notificationTimeComponents = DateComponents()
-        notificationTimeComponents.hour = 17
-        notificationTimeComponents.minute = 10
+        notificationTimeComponents.hour = 20
+        notificationTimeComponents.minute = 03
         notificationTimeComponents.second = 0
         
         notificationHelper.scheduleLocalNotification(notificationContent: notifContent, notificationDate: notificationTimeComponents, repeats: true, identifier: "DailyReminder")
@@ -92,7 +94,7 @@ class PreferencesViewController: UIViewController, UITextFieldDelegate {
         let phoneNumberAdded = UserDefaults.standard.string(forKey: "MothersNumber")
         
         if phoneNumberAdded != nil {
-            addNumberButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
+            addNumberButtonView.layer.backgroundColor = UIColor.systemBlue.cgColor
             addNumberButton.setTitle("Update mother's number 📱", for: .normal)
             addNumberButton.setTitleColor(.white, for: .normal)
         }
@@ -135,8 +137,8 @@ protocol NotifDelegate {
 
 extension PreferencesViewController: NotifDelegate {
     func notifsAuthorized() {
-        allowNotifsButtonView.layer.backgroundColor = CGColor(red: 140/255, green: 240/255, blue: 110/255, alpha: 1)
-        allowNotifsButton.setTitle("Notifications are allowed ✅", for: .normal)
+        allowNotifsButtonView.layer.backgroundColor = UIColor.systemBlue.cgColor
+        allowNotifsButton.setTitle("Notifications are on ✅", for: .normal)
         allowNotifsButton.setTitleColor(.white, for: .normal)
     }
     

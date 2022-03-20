@@ -30,7 +30,7 @@
 		961E0C5527E6467F005A4765 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 961E0C4727E6467D005A4765 /* Nunito-ExtraLightItalic.ttf */; };
 		961E0C5627E6467F005A4765 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 961E0C4827E6467E005A4765 /* Nunito-ExtraBoldItalic.ttf */; };
 		961E0C5727E6467F005A4765 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 961E0C4927E6467F005A4765 /* Nunito-Italic.ttf */; };
-		96E5489F27E5F7FA0053E686 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */; };
+		96D4E02B27E73DA90072BAEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D4E02A27E73DA90072BAEA /* GoogleService-Info.plist */; };
 		9D3DE94F1FFB8EB47C4A8386 /* Pods_Mother_Message.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DDF4F6BF64DC8BFF6DDB77 /* Pods_Mother_Message.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		961E0C4727E6467D005A4765 /* Nunito-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		961E0C4827E6467E005A4765 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		961E0C4927E6467F005A4765 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
-		96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		96D4E02A27E73DA90072BAEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 				960B77E927E5E4A800C29C4A /* Assets.xcassets */,
 				960B77EB27E5E4A800C29C4A /* LaunchScreen.storyboard */,
 				960B77EE27E5E4A800C29C4A /* Info.plist */,
-				96E5489E27E5F7FA0053E686 /* GoogleService-Info.plist */,
+				96D4E02A27E73DA90072BAEA /* GoogleService-Info.plist */,
 				960B77E627E5E4A300C29C4A /* Mother_Message.xcdatamodeld */,
 				960B77F427E5E64400C29C4A /* MainViewController.swift */,
 				960B77F627E5EB1700C29C4A /* PreferencesViewController.swift */,
@@ -224,9 +224,9 @@
 				960B77ED27E5E4A800C29C4A /* LaunchScreen.storyboard in Resources */,
 				961E0C4D27E6467F005A4765 /* Nunito-LightItalic.ttf in Resources */,
 				961E0C4E27E6467F005A4765 /* Nunito-SemiBoldItalic.ttf in Resources */,
-				96E5489F27E5F7FA0053E686 /* GoogleService-Info.plist in Resources */,
 				961E0C4B27E6467F005A4765 /* Nunito-Light.ttf in Resources */,
 				961E0C4F27E6467F005A4765 /* Nunito-BoldItalic.ttf in Resources */,
+				96D4E02B27E73DA90072BAEA /* GoogleService-Info.plist in Resources */,
 				961E0C5427E6467F005A4765 /* Nunito-ExtraLight.ttf in Resources */,
 				960B77EA27E5E4A800C29C4A /* Assets.xcassets in Resources */,
 				960B77E527E5E4A300C29C4A /* Main.storyboard in Resources */,
@@ -444,6 +444,7 @@
 				DEVELOPMENT_TEAM = DLG7YMAG67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mother-Message/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mother Message";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -455,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.neurify.Mother-Message";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.neurify.MotherMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -475,6 +476,7 @@
 				DEVELOPMENT_TEAM = DLG7YMAG67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mother-Message/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mother Message";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -486,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.neurify.Mother-Message";
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.neurify.MotherMessage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
